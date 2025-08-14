@@ -1,5 +1,8 @@
 #include "CustomOperation/CustomOperation.h"
 
+#include "circt/Support/Naming.h"
+// #include "mlir/Pass/Pass.h" // TODO not sure if this is (un)necessary
+#include "mlir/Tools/Plugins/PassPlugin.h"
 // TODO:
 // #include relevant Dialects/Operations
 // #include relevant mlir libraries
@@ -14,6 +17,8 @@ namespace customoperation { // TODO rename
 
 #define GEN_PASS_DEF_CUSTOMOPERATIONPASS
 #include "CustomOperation/CustomOperation.h.inc"
+
+namespace {
 
 // TODO if needed: implement relevant helper functions / Rewrite-Patterns / ... here
 
