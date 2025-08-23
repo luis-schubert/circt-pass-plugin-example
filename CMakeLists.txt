@@ -10,9 +10,9 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 # Set LLVM/MLIR directory paths manually if not installed system-wide
 # These should point to your LLVM build, not source
 # Currently assumes, that circt is located adjacent to this project folder
-set(LLVM_DIR "${CMAKE_SOURCE_DIR}/../circt/llvm/build/lib/cmake/llvm")
-set(MLIR_DIR "${CMAKE_SOURCE_DIR}/../circt/llvm/build/lib/cmake/mlir")
-set(CIRCT_DIR "${CMAKE_SOURCE_DIR}/../circt/build/lib/cmake/circt")
+set(LLVM_DIR "${CMAKE_SOURCE_DIR}/circt/llvm/build/lib/cmake/llvm")
+set(MLIR_DIR "${CMAKE_SOURCE_DIR}/circt/llvm/build/lib/cmake/mlir")
+set(CIRCT_DIR "${CMAKE_SOURCE_DIR}/circt/build/lib/cmake/circt")
 
 # Find LLVM and MLIR packages
 find_package(LLVM REQUIRED CONFIG)
