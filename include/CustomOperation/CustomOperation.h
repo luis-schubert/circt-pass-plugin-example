@@ -10,8 +10,8 @@ namespace customoperation {
 #include "CustomOperation/CustomOperation.h.inc" // this file will be generated
 
 // trigger generation of the pass registration (see https://mlir.llvm.org/docs/PassManagement/#pass-registration)
-#define GEN_PASS_REGISTRATION
-#include "CustomOperation/CustomOperation.h.inc" // this file will be generated
+#define GEN_PASS_REGISTRATION // Trigger generation of registration-boilerplate
+#include "CustomOperation/CustomOperation.h.inc" // include the generated file
 }  // namespace customoperation
 }  // namespace mlir
 

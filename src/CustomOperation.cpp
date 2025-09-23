@@ -37,6 +37,11 @@ namespace mlir {
 /// Necessary symbol to register the pass plugin.
 extern "C" LLVM_ATTRIBUTE_WEAK PassPluginLibraryInfo mlirGetPassPluginInfo() {
   return {MLIR_PLUGIN_API_VERSION, "CustomOperation", "v0.1",
-          []() { mlir::customoperation::registerCustomOperationPass(); }};
+          []() {
+              // call registerCustomOperationPass(), which in turn
+              /// calls createCustomOperationPass() (see line 89
+              /// of build/include/CustomOperation/CustomOperation.h.inc)
+              mlir::customoperation::registerCustomOperationPass();
+          }};
 }
 }  // namespace mlir
